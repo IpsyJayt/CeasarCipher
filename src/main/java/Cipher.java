@@ -14,4 +14,14 @@ public class Cipher {
     public String getInputText (){
         return inputText;
     }
+    public String codeText (String shiftDirection, int shiftKey){
+        String[] splitInputText = inputText.split("");
+
+        for (String letter : splitInputText){
+
+        }
+        return null;
+    }
+
+
 }

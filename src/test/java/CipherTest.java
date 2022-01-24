@@ -15,4 +15,11 @@ public class CipherTest {
         Cipher cipher = new Cipher("works");
         assertEquals("works", cipher.getInputText());
     }
+    //test for encrypting the InputText with a shift key of 1 to the right
+
+    @Test
+    public void codeTheText_shiftTextToTheRightBy1_returnsCodedMessage() {
+        Cipher cipher = new Cipher("ab");
+        assertEquals("bc",cipher.codedText(right, 1));
+    }
 }
