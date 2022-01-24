@@ -40,7 +40,7 @@ public class Cipher {
 
 
         }
-        return null;
+        return encryptedText;
     }
 
 
