@@ -22,4 +22,10 @@ public class CipherTest {
         Cipher cipher = new Cipher("ab");
         assertEquals("bc",cipher.codedText("right", 1));
     }
+
+    @Test
+    public void codeTheText_shiftTextToTheLeftBy1_returnCodedText() {
+        Cipher cipher = new Cipher("c");
+        assertEquals("b",cipher.codedText("left", 1) );
+    }
 }

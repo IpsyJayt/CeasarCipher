@@ -23,6 +23,7 @@ public class Cipher {
             } else if(letter.matches("[^a-zA-Z]")){  //Using the Java Regex or Regular Expression to define a pattern for searching or manipulating strings.
                 encryptedText += letter;
             }
+            //right Shift
             else {
                 if(shiftDirection.equalsIgnoreCase("right")){
                     for (int i=0; i<alphaBets.length;i++){
@@ -33,6 +34,20 @@ public class Cipher {
                                 encryptedText+=alphaBets[(i+shiftKey)];
                             }
                         }
+                    }
+                }
+                //left shift
+                else {
+                    for (int i = alphaBets.length-1; i >=0 ; i--) {
+                        if (letter.equalsIgnoreCase(alphaBets[i])){
+                            if ((i-shiftKey)<0){
+                                encryptedText += alphaBets[(i+26-shiftKey)];
+                            }
+                            else {
+                                encryptedText += alphaBets[(i-shiftKey)];
+                            }
+                        }
+
                     }
                 }
             }
