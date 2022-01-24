@@ -12,6 +12,15 @@ public class App{
             int userSelection = userInput.nextInt();
             userInput.nextLine(); //THE INPUT TO BE USED BY nextInt();
 
+            //ENCODE PATH
+
+            if (userSelection == 1){
+                System.out.println("Enter the message you'd like to encode:");
+                String userMessage = userInput.nextLine();
+                System.out.println("Pick the Encoding direction: Right or Left");
+                String userDirection = ""
+            }
+
         }
     }
 }
