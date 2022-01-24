@@ -34,4 +34,10 @@ public class CipherTest {
         Cipher cipher= new Cipher("bc");
         assertEquals("ab", cipher.decodedText("right", 1));
     }
+
+    @Test
+    public void decodeTheText_decodeByALeftShiftKeyOf1_RuturnDecodedText () {
+        Cipher cipher = new Cipher("b");
+        assertEquals("c", cipher.decodedText("left",1));
+    }
 }

@@ -73,6 +73,9 @@ public class Cipher {
                             }
                         }
                     }
+                } else {
+                    // Left shift key Decryption
+
                 }
             }
         }
