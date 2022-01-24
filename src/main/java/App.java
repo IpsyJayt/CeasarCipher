@@ -38,7 +38,7 @@ public class App{
             }
             //DECODE MESSAGE
             else if (userSelection == 2) {
-                System.out.println("Enter the text you'dlike to decrypt");
+                System.out.println("Enter the text you'd like to decrypt");
                 String userMessage = userInput.nextLine();
                 System.out.println("In which direction do you want to decrypt your information? Right or Left");
                 String userDirection = "";
@@ -55,8 +55,13 @@ public class App{
                         correctDirection = false;
                     }
                 }
+                System.out.println("How many characters do you want to shift to the " +userDirection + ".");
+                int userShiftKey = userInput.nextInt();
+                Cipher cipher = new Cipher(userMessage);
+                System.out.println("Your decoded message is :\n" + cipher.decodedText(userDirection,userShiftKey));
 
-            }
+            } else {
         }
+
     }
 }
