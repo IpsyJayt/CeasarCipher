@@ -67,9 +67,9 @@ public class Cipher {
                     for (int i = 0; i <alphaBets.length ; i++) {
                         if(letter.equalsIgnoreCase(alphaBets[i])){
                             if ((i+shiftKey) >= alphaBets.length){
-                                decryptedText += alphaBets[(i-26+shiftKey)];
+                                decryptedText += alphaBets[(i-26-shiftKey)];
                             } else {
-                                decryptedText += alphaBets[(i+shiftKey)];
+                                decryptedText += alphaBets[(i-shiftKey)];
                             }
                         }
                     }
