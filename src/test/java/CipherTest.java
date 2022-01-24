@@ -36,8 +36,8 @@ public class CipherTest {
     }
 
     @Test
-    public void decodeTheText_decodeByALeftShiftKeyOf1_RuturnDecodedText () {
-        Cipher cipher = new Cipher("b");
-        assertEquals("c", cipher.decodedText("left",1));
+    public void decodeTheText_decodeByALeftShiftKeyOf1_ReturnDecodedText () {
+        Cipher cipher = new Cipher("z");
+        assertEquals("a", cipher.decodedText("left",1));
     }
 }

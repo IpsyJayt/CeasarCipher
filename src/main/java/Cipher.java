@@ -74,8 +74,17 @@ public class Cipher {
                         }
                     }
                 } else {
-                    // Left shift key Decryption
+                    //left key decryption
+                    for (int i = alphaBets.length-1; i >=0 ; i--) {
+                        if (letter.equalsIgnoreCase(alphaBets[i])){
+                            if ((i+shiftKey) > alphaBets.length-1){
+                                decryptedText += alphaBets[(i-26+shiftKey)];
+                            } else {
+                                decryptedText += alphaBets[i+shiftKey];
+                            }
+                        }
 
+                    }
                 }
             }
         }
