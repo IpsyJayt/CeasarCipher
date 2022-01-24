@@ -47,16 +47,14 @@ public class Cipher {
                                 encryptedText += alphaBets[(i-shiftKey)];
                             }
                         }
-
                     }
                 }
             }
-
-
-
         }
         return encryptedText;
     }
-
-
+    public String decodedText (String shiftDirection, int shiftKey){
+        String[] splitInputText = inputText.split("");
+        return null;
+    }
 }

@@ -22,10 +22,16 @@ public class CipherTest {
         Cipher cipher = new Cipher("ab");
         assertEquals("bc",cipher.codedText("right", 1));
     }
-
+    // test for encoding using a left shift key
     @Test
     public void codeTheText_shiftTextToTheLeftBy1_returnCodedText() {
         Cipher cipher = new Cipher("c");
         assertEquals("b",cipher.codedText("left", 1) );
+    }
+     // test for right shift key decryption
+    @Test
+    public void decodeTheText_decodeByARightShiftKeyOf1_returnDecodedText() {
+        Cipher cipher= new Cipher("dog");
+        assertEquals( true,cipher.decodedText("right", 1) instanceof String);
     }
 }
