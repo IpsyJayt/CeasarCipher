@@ -55,6 +55,27 @@ public class Cipher {
     }
     public String decodedText (String shiftDirection, int shiftKey){
         String[] splitInputText = inputText.split("");
-        return null;
+        for (String letter: splitInputText){
+            if(letter.contains(" ")){
+                decryptedText+= " ";
+            } else if (letter.matches("[^a-zA-Z]")){
+                decryptedText += letter;
+            }
+            else {
+                if(shiftDirection.equalsIgnoreCase("right")){
+                    //right shift key decryption
+                    for (int i = 0; i <alphaBets.length ; i++) {
+                        if(letter.equalsIgnoreCase(alphaBets[i])){
+                            if ((i+shiftKey) >= alphaBets.length){
+                                decryptedText += alphaBets[(i-26+shiftKey)];
+                            } else {
+                                decryptedText += alphaBets[(i+shiftKey)];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return decryptedText;
     }
 }

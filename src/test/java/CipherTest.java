@@ -31,7 +31,7 @@ public class CipherTest {
      // test for right shift key decryption
     @Test
     public void decodeTheText_decodeByARightShiftKeyOf1_returnDecodedText() {
-        Cipher cipher= new Cipher("dog");
-        assertEquals( true,cipher.decodedText("right", 1) instanceof String);
+        Cipher cipher= new Cipher("bc");
+        assertEquals("ab", cipher.decodedText("right", 1));
     }
 }
