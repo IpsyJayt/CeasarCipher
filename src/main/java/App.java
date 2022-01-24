@@ -18,7 +18,20 @@ public class App{
                 System.out.println("Enter the message you'd like to encode:");
                 String userMessage = userInput.nextLine();
                 System.out.println("Pick the Encoding direction: Right or Left");
-                String userDirection = ""
+                String userDirection = "";
+
+                //VALIDATE THE DIRECTION
+                boolean correctDirection = true;
+                while (correctDirection){
+                    userDirection = userInput.nextLine();
+                    if(!userDirection.equalsIgnoreCase("right") && !userDirection.equalsIgnoreCase("left")){
+                        System.out.println("Please select a direction by typing left or right");
+                    }
+                    else {
+                        correctDirection = false;
+                    }
+
+                }
             }
 
         }
