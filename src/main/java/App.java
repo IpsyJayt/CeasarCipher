@@ -61,7 +61,9 @@ public class App{
                 System.out.println("Your decoded message is :\n" + cipher.decodedText(userDirection,userShiftKey));
 
             } else {
-        }
+                selectionsLoop = false;
+            }
+        } userInput.close();
 
     }
 }
