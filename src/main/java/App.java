@@ -35,9 +35,28 @@ public class App{
                 int userShiftKey = userInput.nextInt();
                 Cipher cipher = new Cipher(userMessage);
                 System.out.println("Your Encoded message is :\n" + cipher.codedText(userDirection,userShiftKey));
+            }
+            //DECODE MESSAGE
+            else if (userSelection == 2) {
+                System.out.println("Enter the text you'dlike to decrypt");
+                String userMessage = userInput.nextLine();
+                System.out.println("In which direction do you want to decrypt your information? Right or Left");
+                String userDirection = "";
+
+                //VALIDATING DIRECTION
+
+                boolean correctDirection = true;
+                while(correctDirection){
+                    userDirection = userInput.nextLine();
+                    if(!userDirection.equalsIgnoreCase("right") && !userDirection.equalsIgnoreCase("left")){
+                        System.out.println("Please select a direction by typing left or right");
+                    }
+                    else {
+                        correctDirection = false;
+                    }
+                }
 
             }
-
         }
     }
 }
