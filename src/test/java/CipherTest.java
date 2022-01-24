@@ -20,6 +20,6 @@ public class CipherTest {
     @Test
     public void codeTheText_shiftTextToTheRightBy1_returnsCodedMessage() {
         Cipher cipher = new Cipher("ab");
-        assertEquals("bc",cipher.codedText(right, 1));
+        assertEquals("bc",cipher.codedText("right", 1));
     }
 }
