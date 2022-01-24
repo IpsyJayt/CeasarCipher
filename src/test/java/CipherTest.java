@@ -9,4 +9,10 @@ public class CipherTest {
         Cipher cipher = new Cipher ( "works");
         assertEquals(true,  cipher instanceof Cipher);
     }
+//testing the getter methods for getInputText
+    @Test
+    public void getInputText_returnTheInputtedText_returnsTheInput() {
+        Cipher cipher = new Cipher("works");
+        assertEquals("works", cipher.getInputText());
+    }
 }

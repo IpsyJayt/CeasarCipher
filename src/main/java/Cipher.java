@@ -11,4 +11,7 @@ public class Cipher {
         this.encryptedText = "";
         this.decryptedText = "";
     }
+    public String getInputText (){
+        return inputText;
+    }
 }
