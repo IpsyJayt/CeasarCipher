@@ -30,8 +30,12 @@ public class App{
                     else {
                         correctDirection = false;
                     }
-
                 }
+                System.out.println("How many characters do you want to shift to the " +userDirection + ".");
+                int userShiftKey = userInput.nextInt();
+                Cipher cipher = new Cipher(userMessage);
+                System.out.println("Your Encoded message is :\n" + cipher.codedText(userDirection,userShiftKey));
+
             }
 
         }
